@@ -31,7 +31,6 @@ const ContactPage = ({ data: { site } }) => {
             name="contact"
             action="/contact-success"
             className="form-container"
-            data-netlify-recaptcha="true"
           >
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
@@ -51,7 +50,6 @@ const ContactPage = ({ data: { site } }) => {
               Message
               <textarea name="message" id="message" rows="5" />
             </label>
-            <div data-netlify-recaptcha="true"></div>
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
               <button
                 type="submit"
@@ -60,12 +58,6 @@ const ContactPage = ({ data: { site } }) => {
               >
                 Send
               </button>
-              <input
-                type="reset"
-                value="Clear"
-                className="button -primary"
-                style={{ marginRight: 0 }}
-              />
             </div>
           </form>
         </div>
