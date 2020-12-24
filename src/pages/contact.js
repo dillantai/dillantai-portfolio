@@ -24,93 +24,47 @@ const ContactPage = ({ data: { site } }) => {
           <h1 className="post-title">Get in Touch</h1>
         </div>
         <div>
-          {/* <form
-            name="contact"
+          <form
             method="post"
-            action="/contact-success" //
+            netlify-honeypot="bot-field"
             data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            className="form-container" //
+            name="contact"
+            action="/contact-success"
+            className="form-container"
           >
+            <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
-            <div>
-              <label htmlFor="name">Name</label>
+            <label>
+              Name
               <input type="text" name="name" id="name" />
-            </div>
-            <div>
-              <label htmlFor="email">Email</label>
+            </label>
+            <label>
+              Email
               <input type="email" name="email" id="email" />
-            </div>
-            <div>
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="6" required />
-            </div>
+            </label>
+            <label>
+              Subject
+              <input type="text" name="subject" id="subject" />
+            </label>
+            <label>
+              Message
+              <textarea name="message" id="message" rows="5" />
+            </label>
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
-              <input
+              <button
                 type="submit"
+                className="button -primary"
+                style={{ marginRight: 0 }}
+              >
+                Send
+              </button>
+              <input
+                type="reset"
+                value="Clear"
                 className="button -primary"
                 style={{ marginRight: 0 }}
               />
             </div>
-          </form> */}
-
-          <form
-            name="contactForm"
-            method="POST"
-            action="/contact-success"
-            data-netlify-honeypot="bot-field"
-            data-netlify="true"
-            id="contact-form"
-            className="form-container"
-          >
-            <p className="screen-reader-text">
-              <label>
-                Don't fill this out if you're human: <input name="bot-field" />
-              </label>
-            </p>
-            <p className="form-row">
-              <label htmlFor="contact-form-name" className="form-label">
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="contact-form-name"
-                className="form-input"
-              />
-            </p>
-            <p className="form-row">
-              <label htmlFor="contant-form-email" className="form-label">
-                Email address
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="contant-form-email"
-                className="form-input"
-              />
-            </p>
-            <p className="form-row">
-              <label htmlFor="contant-form-message" className="form-label">
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="contant-form-message"
-                className="form-textarea"
-                rows="7"
-              />
-            </p>
-            <input type="hidden" name="form-name" value="contactForm" />
-            <p className="form-row form-submit">
-              <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                <input
-                  type="submit"
-                  className="button -primary"
-                  style={{ marginRight: 0 }}
-                />
-              </div>
-            </p>
           </form>
         </div>
       </div>
