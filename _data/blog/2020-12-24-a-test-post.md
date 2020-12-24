@@ -1,7 +1,7 @@
 ---
 template: BlogPost
 path: /test
-date: 2020-12-24T07:03:45.404Z
+date: 2021-01-02T07:03:45.404Z
 title: A TEST STAR WARS POST!!!!!!!!!!!!!!!!!!!!
 metaDescription: optional meta description
 thumbnail: /assets/venus-evans-wFZ9SYDiS2M-unsplash.jpg
