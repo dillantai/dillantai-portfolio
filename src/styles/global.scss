@@ -19,15 +19,16 @@ body {
   margin-top: 0;
 }
 body.light {
-  --primary-color: #381696;
+  --primary-color: #0050f5;
   --primary-text-color: #fff;
-  --featured-bg: #493b8a;
-  --featured-text: #fff;
+  --featured-bg: #0050f5;
+  --featured-text: #ffffff;
   --secondary-color: #10072b;
-  --background: #fff;
+  --background: #ffffff;
+  --text-color: #000000;
   --site-header: var(--background);
-  --card-bg: #fff;
-  --card-bdr: #eee;
+  --card-bg: #ffffff;
+  --card-bdr: #eeeeee;
   --card-shadow: #d5d5d5;
   --btn-bg: var(--background);
   --btn-bdr: #d3d6e7;
@@ -37,13 +38,14 @@ body.light {
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
+  --button-hover: var(--secondary-color);
 }
 body.dark {
-  --primary-color: #9984d5;
-  --primary-text-color: #fff;
-  --featured-bg: #66578d;
-  --featured-text: #fff;
-  --secondary-color: #66578d;
+  --primary-color: #6391EE;
+  --primary-text-color: #ffffff;
+  --featured-bg: #6391EE;
+  --featured-text: #ffffff;
+  --secondary-color: #6391EE;
   --background: #0a041a;
   --text-color: rgba(255, 255, 255, 0.88);
   --text-secondary-color: rgba(255, 255, 255, 0.66);
@@ -57,8 +59,9 @@ body.dark {
   --btn-hover-bg: var(--btn-bdr);
   --btn-hover-text-color: #00062b;
   --contact-bg: var(--card-shadow);
-  --contact-bdr: var(--card-bg);
-  --input-bg: var(--card-bg);
+  --contact-bdr: var(--primary-color);
+  --input-bg: #303030;
+  --button-hover: #0050f5;
 }
 /* System Fonts as used by Medium and WordPress */
 body {
@@ -87,7 +90,8 @@ a {
   align-items: center;
   font-weight: 300;
   a {
-    color: #888;
+    color: var(--text-color);
+
     text-decoration: none;
     margin: 0 8px 0;
     &[aria-current] {
@@ -143,16 +147,18 @@ a {
   }
   &.-primary {
     background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    border-color: var(--button-hover);
     color: var(--primary-text-color);
+    font-size: 19px;
+    font-weight: bold;
     &:hover {
-      background-color: var(--secondary-color);
-      color: var(--primary-text-color);
+      background-color: var(--button-hover);
+      color: var(--featured-text);
       text-decoration: none;
     }
   }
   &:hover {
-    background-color: var(--btn-hover-bg);
+    background-color: var(--button-hover);
     color: var(--btn-hover-text-color);
   }
 }
@@ -184,7 +190,7 @@ a {
     margin: 0 0 0.5rem;
     line-height: 1.3;
     font-size: 2rem;
-    font-family: $font-family-serif;
+    font-family: $font-family-display-solid;
   }
   .post-meta {
     margin-bottom: 32px;
@@ -194,7 +200,6 @@ a {
 .post-thumbnail {
   text-align: center;
   min-height: 380px;
-  //background-image: url('/assets/circles-light.png');
   background-color: var(--featured-bg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -274,7 +279,6 @@ a {
 .site-footer {
   text-align: center;
   margin: 90px 0 16px;
-  color: #666;
   a {
     font-weight: 700;
   }
@@ -287,14 +291,14 @@ a {
   label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--text-secondary-color);
+    color: var(--text-color);
   }
   input[type="text"],
   input[type="email"],
   textarea {
     appearance: none;
     border: 1px solid var(--card-shadow);
-    color: var(--text-secondary-color);
+    color: var(--text-color);
     border-radius: 6px;
     line-height: 24px;
     padding: 6px 12px;
@@ -354,6 +358,10 @@ body.light {
   width: 24px;
   height: 24px;
   margin-left: 20px;
+  &:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+  }
 }
 // CSS.gg icons for sun and moon
 .gg-sun {
