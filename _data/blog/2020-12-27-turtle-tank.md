@@ -1,8 +1,9 @@
 ---
 template: BlogPost
-path: /turtle-tank
+path: /css-art-turtle-tank
 date: 2020-12-27T07:52:50.468Z
-title: turtle tank
+title: 'CSS Art: Tank and the Tortugas'
+thumbnail: /assets/css-art-red-eared-slider.jpg
 ---
 A turtle will always grow to fit its surroundings.
 
