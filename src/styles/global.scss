@@ -3,7 +3,7 @@
 
 $font-family-sans-serif: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$font-family-serif: "Martel", "Big Caslon", "Georgia", "Times", serif ;
+$font-family-serif: "Martel", "Big Caslon", "Georgia", "Times", serif;
 
 html,
 body {
@@ -18,7 +18,7 @@ body.light {
   --primary-text-color: #fff;
   --featured-bg: #0050f5;
   --featured-text: #ffffff;
-  --secondary-color: #10072b;
+  --secondary-color: #000000;
   --background: #ffffff;
   --text-color: #000000;
   --site-header: var(--background);
@@ -45,7 +45,7 @@ body.dark {
   --text-color: rgba(255, 255, 255, 0.88);
   --text-secondary-color: rgba(255, 255, 255, 0.66);
   --site-header: var(--background);
-  --card-bg: #181326;
+  --card-bg: #101a2e;
   --card-bdr: #181326;
   --card-shadow: #020204;
   --btn-bg: var(--background);
@@ -53,16 +53,26 @@ body.dark {
   --btn-text-color: #868892;
   --btn-hover-bg: var(--btn-bdr);
   --btn-hover-text-color: #00062b;
-  --contact-bg: var(--card-shadow);
-  --contact-bdr: var(--primary-color);
-  --input-bg: #303030;
+  --contact-bg: var(--card-bg);
+  --contact-bdr: var(--card-bdr);
+  --input-bg: var(--card-shadow);
   --button-hover: #0050f5;
 }
 /* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family-sans-serif;
-  border-top: 10px solid var(--primary-color);
+  // border-top: 10px solid var(--primary-color);
+  background: radial-gradient(
+    circle at 50% 0%,
+    var(--primary-color) 25%,
+    var(--background) 26%,
+    var(--background) 40%
+  );
+  // background-color: #E26464;
+  // height:50px;
   background-color: var(--background);
+  background-size: 50px 100px;
+  background-repeat: repeat-x;
   color: var(--text-color);
 }
 a {
@@ -166,7 +176,7 @@ a {
     font-weight: 900;
     margin-bottom: 1rem;
     font-family: $font-family-serif;
-  
+
     @media only screen and (min-width: 768px) {
       font-size: 68px;
       line-height: 80px;
@@ -326,7 +336,7 @@ a {
 .site-footer {
   text-align: center;
   margin: 90px 0 16px;
-  
+
   a {
     font-weight: 700;
   }
@@ -345,7 +355,7 @@ a {
   input[type="email"],
   textarea {
     appearance: none;
-    border: 1px solid var(--card-shadow);
+    border: 1px solid var(--primary-color);
     color: var(--text-color);
     border-radius: 6px;
     line-height: 24px;
@@ -390,7 +400,15 @@ a {
 
 // theme-changer
 .theme-changer {
-  display: none;
+  opacity: 0;
+  position: absolute;
+
+  // &:focus {
+  //   + .mode-container {
+  //     border: outset 3px purple;
+  //     outline: outset 3px white;
+  //   }
+  // }
 }
 body.dark {
   .gg-moon {

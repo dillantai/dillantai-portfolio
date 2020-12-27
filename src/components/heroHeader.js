@@ -16,7 +16,7 @@ export default () => (
     `}
     render={data => (
       <section className="hero__container">
-        <div className="hero__headline">{data.site.siteMetadata.home.title}</div>
+        <h1 className="hero__headline">{data.site.siteMetadata.home.title}</h1>
         <div className="hero__content">
           <div
             className="hero__text"
@@ -29,7 +29,7 @@ export default () => (
           </Link>
         </div>
         <div className="hero__image">
-          <img src="/assets/developer-blue.svg" alt=""/>
+          <img src="/assets/developer-blue.svg" alt="person sitting at computer desk"/>
         </div>
       </section>
     )}

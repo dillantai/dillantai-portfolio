@@ -1,21 +1,22 @@
-import React from 'react'
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import React from "react";
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
 
 export default () => (
   <ThemeToggler>
     {({ theme, toggleTheme }) => (
       <label>
         <input
+          aria-labelledby="toggle-light-dark-mode"
           type="checkbox"
           className="theme-changer"
-          onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-          checked={theme === 'dark'}
-        />{' '}
-        <div className="mode-container">
+          onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
+          checked={theme === "dark"}
+        />{" "}
+        <div className="mode-container" id="toggle-light-dark-mode">
           <i className="gg-sun"></i>
           <i className="gg-moon"></i>
         </div>
       </label>
     )}
   </ThemeToggler>
-)
+);

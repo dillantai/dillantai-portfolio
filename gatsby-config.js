@@ -44,11 +44,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Delog GatbsyJS Starter`,
-        short_name: `Delog`,
+        name: `Dillan Tai Portfolio`,
+        short_name: `Dillan`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#381696`,
+        background_color: `#ffffff`,
+        theme_color: `#0050f5`,
         display: `standalone`,
         icon: "src/images/icon.png",
       },
