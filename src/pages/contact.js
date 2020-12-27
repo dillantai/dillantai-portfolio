@@ -17,7 +17,7 @@ const ContactPage = ({ data: { site } }) => {
         <div
           className="post-thumbnail"
           style={{
-            backgroundImage: `url('/assets/alexander-andrews-HgUDpaGPTEA-unsplash.jpg')`,
+            backgroundImage: `url('/assets/contact-2.jpg')`,
             marginBottom: 0
           }}
         >
