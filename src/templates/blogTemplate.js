@@ -13,7 +13,7 @@ export default function Template({
     <Layout>
       <Helmet>
         <title>{frontmatter.title} | {siteMetadata.title}</title>
-        <meta name="description" content={frontmatter.metaDescription} />
+        {/* <meta name="description" content={frontmatter.metaDescription} /> */}
       </Helmet>
       <div className="blog-post-container">
         <article className="post">
@@ -54,7 +54,6 @@ export const pageQuery = graphql`
         path
         title
         thumbnail
-        metaDescription
       }
     }
   }
