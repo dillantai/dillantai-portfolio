@@ -29,7 +29,7 @@ export default () => (
           </Link>
         </div>
         <div className="hero__image">
-          <img src="/assets/developer-monochrome.svg" alt=""/>
+          <img src="/assets/developer-blue.svg" alt=""/>
         </div>
       </section>
     )}
