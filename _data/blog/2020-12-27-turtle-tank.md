@@ -40,7 +40,7 @@ The build needed the following "components":
 The nesting of these elements proved to be key because I wanted the outside environment to have a solid colored background (pink) that didn't affect the color of the water. The water, in turn, needed to be blue enough but also have an opaque quality. I achieved this effect by building two layers of water - one behind the tank items and one in front with 50% `opacity` and highest `z-index`. 
 
 ```html
-<!-- HTML -->
+<!-- turtle-tank.html -->
 <div class="container">
   <div class="tank">
     <div class="tank__water"></div>
@@ -50,7 +50,7 @@ The nesting of these elements proved to be key because I wanted the outside envi
 ```
 
 ```scss
-// SCSS
+// turtle-tank.scss
 .tank {
   border: black 5px solid;
   border-top: none;
@@ -86,6 +86,7 @@ At the same level as the water layers (children of `tank`), I added the remainin
 Originally I had a "representation" of the turtle - just a green rectangle. Very abstract. Eventually I added the shell, head (which contains the eye and red "ear") as well as all the limbs: 
 
 ```html
+<!-- turtle-tank.html -->
 <div class="turtle">
   <div class="turtle__shell"></div>
   <div class="turtle__head">
@@ -100,6 +101,8 @@ Originally I had a "representation" of the turtle - just a green rectangle. Very
 </div>
 ```
 
+
+
 Add some styles and the work of art was complete! 
 
 ## Animation
@@ -107,27 +110,28 @@ Add some styles and the work of art was complete!
 I wanted to be able to move my lil friend around, so I added an "animation control" section to the SCSS:
 
 ```scss
-  .turtle {
-    width: 16%;
-    height: 10%;
-    z-index: 1;
+// turtle-tank.scss
+.turtle {
+  width: 16%;
+  height: 10%;
+  z-index: 1;
 
-    // ~animation control~
-    left: 75%;
-    // left: 55%;
-    top: -6%;
-    // top: 4%;
-    // left: 40%;
-    // top: 11%;
-    // left: 9%;
-    // top: 20%;
-    // top: 30%;
-    // top: 40%;
-    // top: 85%;
+  // ~animation control~
+  left: 75%;
+  // left: 55%;
+  top: -6%;
+  // top: 4%;
+  // left: 40%;
+  // top: 11%;
+  // left: 9%;
+  // top: 20%;
+  // top: 30%;
+  // top: 40%;
+  // top: 85%;
 
-  transform: scaleX(-1);
-    // -webkit-transform: rotate(-30deg);
-  }
+transform: scaleX(-1);
+  // -webkit-transform: rotate(-30deg);
+}
 ```
 
 I realize this is a very manual animation process but it was still pretty fun to be able to maneuver turtle around the tank. In the future I could use some JS to truly animate the project.
@@ -139,12 +143,14 @@ Finally, I wanted to host this as a page on my new personal site built on Gatsby
 A few modifications were now in order. Instead of the conventional way of setting a class in the HTML:
 
 ```html
+<!-- turtle-tank.html -->
 <div class="turtle"></div>
 ```
 
 Using CSS Modules allows you to dynamically access the classes via import, and with a new naming convention: 
 
 ```javascript
+// turtle-tank.js
 import styles from "./turtle-tank.module.scss";
 
 <div className={styles.turtle}>
@@ -153,6 +159,7 @@ import styles from "./turtle-tank.module.scss";
 I also quickly saw build errors, and learned that in order to list two or more classes in a single element you must use the following convention: 
 
 ```javascript
+// turtle-tank.js
 <div 
   className={`${styles.turtleLimb} ${styles.turtleLimbArm} ${styles.turtleLimbArmLeft}`}
 ></div>
@@ -164,4 +171,8 @@ The last adjustment I made was the tank width. Setting an absolute width worked 
 
 As the common misconception goes, "a turtle will never grow larger than its enclosure." Or put another way, "a turtle's size will always be proportional to its container." 
 
-Here's my soapbox moment: please reconsider adopting a pet turtle unless you are able to provide adequate space for it into adulthood. Turtles can easily live more than 20 years in captivity and they can grow to be as large as dinner plates (12 inches shell length). A common rule-of-thumb is to provide 10 gallons of water per 1 inch of turtle shell.
+Here's my soapbox moment: please reconsider adopting a pet turtle unless you are able to provide adequate space for it into adulthood. Turtles can easily live more than 20 years in captivity and they can grow to be as large as dinner plates (12 inches shell length). A common rule-of-thumb is to provide 10 gallons of water per 1 inch of turtle shell. [Red-eared slider care reference sheet](https://static1.squarespace.com/static/5706bdd507eaa0b8239942b7/t/5c2d4066758d46b52fc69fbf/1546469480152/Aquatic+Turtle+Care+-+Aurora+Animal+Hospital.pdf).
+
+## Closing Remarks
+
+[See the final build](/turtle-tank/) of my first CSS Art project. I had fun and it was a lot less daunting than expected. I'm looking forward to making more art in the future, possibly with moving elements.
