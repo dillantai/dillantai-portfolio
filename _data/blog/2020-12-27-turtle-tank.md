@@ -5,13 +5,13 @@ date: 2020-12-27T07:52:50.468Z
 title: 'CSS Art: Tank and the Tortugas'
 thumbnail: /assets/css-art-red-eared-slider.jpg
 ---
-I'd always been interested in CSS art but didn't consider myself a real artist. That makes sense because the  CSS art my tech bud Allison would send me would HIGHLY [resemble fine art](https://www.vice.com/en/article/9kgx7p/painting-made-with-code-html-pure-css-browser-art-diana-smith). How could I, an elementary school art contest 1998 "runner up", compete with such caliber? 
+I'd always been interested in CSS art but didn't consider myself a real artist. That makes sense because the  CSS art my tech bud Allison would send me would [HIGHLY resemble fine art](https://www.vice.com/en/article/9kgx7p/painting-made-with-code-html-pure-css-browser-art-diana-smith). How could I, an elementary school art contest 1998 "runner up", compete with such caliber? 
 
 Number two issue is that CSS art is widely accepted to exist for "no good reason other than fun, just because, and art." If I ever had a modicum of spare time, it seemed more practical to spend it rebuilding my portfolio site, learning marketable skills in a new technology, generally figuring out my life, etc. 
 
 Well, a few years being in the industry and a couple burnouts later, I finally realize that you have to keep the joy in developing in order to bring your best self. Showing up 100% for your employer is great, but don't forget about building stuff for yourself as well!
 
-So I decided to start with something any decent person would love- a turtle! 
+So I decided to start with something any decent person would love- turtles!
 
 ## Setup and Tools
 
@@ -101,8 +101,6 @@ Originally I had a "representation" of the turtle - just a green rectangle. Very
 </div>
 ```
 
-
-
 Add some styles and the work of art was complete! 
 
 ## Animation
@@ -165,13 +163,13 @@ I also quickly saw build errors, and learned that in order to list two or more c
 ></div>
 ```
 
-The last adjustment I made was the tank width. Setting an absolute width worked fine while building on desktop in Codepen, but caused the page layout to break on mobile when hosted on an actual webpage.  Setting width to 100% instead sort of solved the issue - the layout was no longer breaking. The turtle, however, was shrinking or stretching according to the window width. As using percentage based widths and heights is a core principle of generating CSS art, this is a fun instance of my favorite thing to tell "bug" finders .... *expected behavior*. 
+The last adjustment I made was the tank width. Setting an absolute width worked fine while building on desktop in Codepen, but caused the page layout to break on mobile when hosted on an actual webpage.  Setting width to 100% instead sort of solved the issue - the layout was no longer breaking. The turtle, however, was shrinking or stretching according to the window width. As using percentage based widths and heights is a core principle of generating CSS art, this is a fun instance of my favorite thing to tell "bug" finders ... "*expected behavior"*.
 
 ![GIF of CSS art width being resized in Chrome Developer Tools](/assets/Screen+Recording+2020-12-26+at+23.51.07.gif)
 
 As the common misconception goes, "a turtle will never grow larger than its enclosure." Or put another way, "a turtle's size will always be proportional to its container." 
 
-Here's my soapbox moment: please reconsider adopting a pet turtle unless you are able to provide adequate space for it into adulthood. Turtles can easily live more than 20 years in captivity and they can grow to be as large as dinner plates (12 inches shell length). A common rule-of-thumb is to provide 10 gallons of water per 1 inch of turtle shell. [Red-eared slider care reference sheet](https://static1.squarespace.com/static/5706bdd507eaa0b8239942b7/t/5c2d4066758d46b52fc69fbf/1546469480152/Aquatic+Turtle+Care+-+Aurora+Animal+Hospital.pdf).
+Here's my soapbox moment: please reconsider adopting a pet turtle unless you are able to provide adequate space for it into adulthood. Turtles can easily live more than 20 years in captivity and they can grow to be as large as dinner plates (8-12 inches shell length). A common rule-of-thumb is to provide 10 gallons of water per 1 inch of turtle shell. Math that out and you'll find you need at least 80-120 gallons of water for a single adult turtle, among other needs like adequate basking area, UVB lights, effective filtration system, etc. This is much more involved than the plastic clam-shell tank most pet shops send you home with. More info can be found in this [red-eared slider care reference sheet](https://static1.squarespace.com/static/5706bdd507eaa0b8239942b7/t/5c2d4066758d46b52fc69fbf/1546469480152/Aquatic+Turtle+Care+-+Aurora+Animal+Hospital.pdf).
 
 ## Closing Remarks
 
