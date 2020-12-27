@@ -21,7 +21,7 @@ const ContactPage = ({ data: { site } }) => {
             marginBottom: 0
           }}
         >
-          <h1 className="post-title">Get in Touch</h1>
+          <h1 className="post-title">get in touch</h1>
         </div>
         <div>
           <form
@@ -35,19 +35,19 @@ const ContactPage = ({ data: { site } }) => {
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
             <label>
-              Name
+              name
               <input type="text" name="name" id="name" />
             </label>
             <label>
-              Email
+              email
               <input type="email" name="email" id="email" />
             </label>
             <label>
-              Subject
+              subject
               <input type="text" name="subject" id="subject" />
             </label>
             <label>
-              Message
+              message
               <textarea name="message" id="message" rows="5" />
             </label>
             <div style={{ display: "flex", justifyContent: "flex-end" }}>

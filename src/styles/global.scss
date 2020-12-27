@@ -1,14 +1,9 @@
-@import "~fontsource-bungee-shade/index.css";
-@import "~fontsource-bungee-inline/index.css";
-@import "~fontsource-roboto-slab/index.css";
 @import "~fontsource-muli/index.css";
+@import "~fontsource-martel/index.css";
 
-
-$font-family-sans-serif: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
-  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$font-family-serif: "Roboto Slab";
-$font-family-display: "Bungee Shade";
-$font-family-display-solid: "Bungee Inline";
+$font-family-sans-serif: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-family-serif: "Martel", "Big Caslon", "Georgia", "Times", serif ;
 
 html,
 body {
@@ -41,11 +36,11 @@ body.light {
   --button-hover: var(--secondary-color);
 }
 body.dark {
-  --primary-color: #6391EE;
+  --primary-color: #6391ee;
   --primary-text-color: #ffffff;
-  --featured-bg: #6391EE;
+  --featured-bg: #6391ee;
   --featured-text: #ffffff;
-  --secondary-color: #6391EE;
+  --secondary-color: #6391ee;
   --background: #0a041a;
   --text-color: rgba(255, 255, 255, 0.88);
   --text-secondary-color: rgba(255, 255, 255, 0.66);
@@ -89,6 +84,8 @@ a {
   display: flex;
   align-items: center;
   font-weight: 300;
+  font-family: $font-family-serif;
+
   a {
     color: var(--text-color);
 
@@ -118,17 +115,10 @@ a {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 900;
-  text-transform: uppercase;
-}
-.hero-header {
-  padding: 0 0 64px;
-  max-width: 980px;
-}
-.headline {
-  font-size: 52px;
-  font-weight: 900;
-  margin-bottom: 1rem;
-  font-family: $font-family-display;
+  text-transform: lowercase;
+  font-family: $font-family-serif;
+  font-size: 23px;
+  letter-spacing: -0.5px;
 }
 .button {
   padding: 18px 27px;
@@ -137,6 +127,7 @@ a {
   border: 1px solid var(--btn-bdr);
   border-radius: 9px;
   text-decoration: none;
+  text-transform: lowercase;
   color: var(--btn-text-color);
   font-size: 16px;
   font-weight: 400;
@@ -162,15 +153,73 @@ a {
     color: var(--btn-hover-text-color);
   }
 }
-.primary-content {
-  font-size: 23px;
-  margin-bottom: 32px;
-  line-height: 1.5;
-  font-weight: 300;
+.hero {
+  &__container {
+    padding: 0 0 64px;
+    border-bottom: 10px dashed var(--primary-color);
+    margin: 0 0 40px;
+    // display: flex;
+  }
+  &__headline {
+    font-size: 48px;
+    line-height: 54px;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    font-family: $font-family-serif;
+  
+    @media only screen and (min-width: 768px) {
+      font-size: 68px;
+      line-height: 80px;
+    }
+  }
+  &__content {
+    width: 100%;
+    display: inline-block;
+    order: 1;
+    @media only screen and (min-width: 768px) {
+      width: 60%;
+    }
+  }
+  &__text {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    font-weight: 300;
+    font-family: $font-family-serif;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 23px;
+      line-height: 1.75;
+    }
+  }
+  &__image {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 30px 0 0;
+    order: 2;
+
+    @media only screen and (min-width: 768px) {
+      width: 40%;
+      margin: 0;
+    }
+
+    img {
+      width: 50%;
+
+      @media only screen and (min-width: 768px) {
+        width: 90%;
+        float: right;
+      }
+    }
+  }
 }
 .section-heading {
-  font-family: $font-family-display-solid;
-  font-size:32px;
+  font-family: $font-family-serif;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: lowercase;
 }
 .post {
   padding: 0;
@@ -190,7 +239,7 @@ a {
     margin: 0 0 0.5rem;
     line-height: 1.3;
     font-size: 2rem;
-    font-family: $font-family-display-solid;
+    font-family: $font-family-serif;
   }
   .post-meta {
     margin-bottom: 32px;
@@ -260,8 +309,6 @@ a {
   .post-title {
     font-size: 1.3rem;
     margin-bottom: 0.3rem;
-    font-family: $font-family-display-solid;
-    font-weight: 100;
   }
   .post-meta {
     margin-bottom: 0;
@@ -279,6 +326,7 @@ a {
 .site-footer {
   text-align: center;
   margin: 90px 0 16px;
+  
   a {
     font-weight: 700;
   }
@@ -304,7 +352,7 @@ a {
     padding: 6px 12px;
     width: calc(100% - 24px);
     margin-bottom: 1.5rem;
-    margin-top:0.5rem;
+    margin-top: 0.5rem;
     background-color: var(--input-bg);
     font-family: $font-family-sans-serif;
     font-size: 16px;

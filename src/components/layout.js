@@ -25,7 +25,7 @@ export default ({ children }) => {
       </header>
       {children}
       <footer className="site-footer">
-        <p>&copy; {new Date().getFullYear()} Dillan Tai. Built with <a href="https://www.gatsbyjs.com/">Gatsby</a> and deployed with <a href="https://www.netlify.com/">Netlify</a>.</p>
+        <p>&copy; {new Date().getFullYear()} dillan tai. built with <a href="https://www.gatsbyjs.com/">gatsby</a> and deployed with <a href="https://www.netlify.com/">netlify</a>.</p>
       </footer>
     </div>
   )
