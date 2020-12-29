@@ -1,16 +1,18 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql } from "gatsby";
 import Layout from "../components/layout";
+import useSiteMetadata from "../hooks/use-sitemetadata";
 
-const ContactPage = ({ data: { site } }) => {
+const ContactPage = () => {
+  const { title, description } = useSiteMetadata();
+
   return (
     <Layout>
       <Helmet>
-        <title>Contact — {site.siteMetadata.title}</title>
+        <title>Contact — {title}</title>
         <meta
           name="description"
-          content={"Contact page of " + site.siteMetadata.description}
+          content= {"Contact page of " + description}
         />
       </Helmet>
       <div className="two-grids -contact">
@@ -66,13 +68,3 @@ const ContactPage = ({ data: { site } }) => {
   );
 };
 export default ContactPage;
-export const pageQuery = graphql`
-  query ContactPageQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`;
