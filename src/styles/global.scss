@@ -112,6 +112,9 @@ a {
       margin-right: 0;
     }
   }
+  .current-page {
+    border-bottom: 2px solid var(--text-color);
+  }
 }
 .site-header {
   display: flex;
