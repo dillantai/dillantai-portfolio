@@ -17,13 +17,13 @@ const useBlogs = () => {
       }
     }
   `);
-  return data.allMarkdownRemark.nodes.map(post => ({
-    date: post.frontmatter.date,
-    path: post.frontmatter.path,
-    title: post.frontmatter.title,
-    thumbnail: post.frontmatter.thumbnail,
-    html: post.html,
-    id: post.id
+  return data.allMarkdownRemark.nodes.map(blog => ({
+    date: blog.frontmatter.date,
+    path: blog.frontmatter.path,
+    title: blog.frontmatter.title,
+    thumbnail: blog.frontmatter.thumbnail,
+    html: blog.html,
+    id: blog.id
   }));
 };
 

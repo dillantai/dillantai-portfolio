@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Layout from "../components/layout";
-import PostPreview from "../components/post-preview";
+import BlogPreview from "../components/blog-preview";
 import HeroHeader from "../components/heroHeader";
 import useSiteMetadata from "../hooks/use-sitemetadata";
 import useBlogs from "../hooks/use-blogs";
@@ -20,8 +20,8 @@ const IndexPage = () => {
       <HeroHeader />
       <h2 className="section-heading">Blog Posts &darr;</h2>
       <div className="grids">
-        {blogs.map(post => (
-          <PostPreview key={post.id} post={post} />
+        {blogs.map(blog => (
+          <BlogPreview key={blog.id} blog={blog} />
         ))}
       </div>
     </Layout>
