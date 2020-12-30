@@ -1,21 +1,15 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import PostLink from "../components/post-link";
+import PostPreview from "../components/post-preview";
 import HeroHeader from "../components/heroHeader";
 import useSiteMetadata from "../hooks/use-sitemetadata";
+import useBlogs from "../hooks/use-blogs";
 
-const IndexPage = ({
-  data: {
-    allMarkdownRemark: { edges }
-  }
-}) => {
+const IndexPage = () => {
+
   const { title, description } = useSiteMetadata();
-
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
+  const blogs = useBlogs();
 
   return (
     <Layout>
@@ -25,27 +19,13 @@ const IndexPage = ({
       </Helmet>
       <HeroHeader />
       <h2 className="section-heading">Blog Posts &darr;</h2>
-      <div className="grids">{Posts}</div>
+      <div className="grids">
+        {blogs.map(post => (
+          <PostPreview key={post.id} post={post} />
+        ))}
+      </div>
     </Layout>
   );
 };
 
 export default IndexPage;
-export const pageQuery = graphql`
-  query indexPageQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 250)
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
-            title
-            thumbnail
-          }
-        }
-      }
-    }
-  }
-`;
