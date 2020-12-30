@@ -58,7 +58,6 @@ collections:
         widget: string
         # pattern: [/]
         pattern: ['.{12,}', "Must have at least 12 characters"]
-
         hint: "Path must start with /"
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
