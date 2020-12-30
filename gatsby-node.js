@@ -25,7 +25,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // Handle errors
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    reporter.panicOnBuild(`Failed to create blogs`, result.errors)
     return
   }
 
@@ -33,7 +33,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
-      context: {}, // additional data can be passed via context
+      context: {
+        path: node.frontmatter.path,
+      }, // additional data can be passed via context
     })
   })
 }
