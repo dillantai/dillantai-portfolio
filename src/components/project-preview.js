@@ -2,24 +2,21 @@ import React from "react";
 import { Link } from "gatsby";
 
 const projectPreview = ({ project }) => (
-  <article className="card project-card">
-
-    <header>
-      <h2 className="post-title">
-        <Link to={`/project/${project.path}`} className="post-link">
-          {project.title}
-        </Link>
-      </h2>
-      <div className="post-meta">{"Project date: " + project.date}</div>
-      <p>{project.excerpt}</p>
-    </header>
-    <Link to={`/project/${project.path}`}>
+  <Link to={`/project/${project.path}`} className="post-link">
+    <article className="card project-card">
+      <header>
+        <h3 className="post-title">{project.title}</h3>
+        <div className="post-meta">{"Project date: " + project.date}</div>
+        <p>{project.excerpt}</p>
+      </header>
       {!!project.thumbnail && (
-        <div className="card-image" style={{backgroundImage:`url(${project.thumbnail})`}}></div>
-        // <img className="card-image" src={project.thumbnail} alt={project.title + "- Featured Shot"} />
+        <div
+          className="card-image"
+          style={{ backgroundImage: `url(${project.thumbnail})` }}
+        ></div>
       )}
-    </Link>
-  </article>
+    </article>
+  </Link>
 );
 
 export default projectPreview;

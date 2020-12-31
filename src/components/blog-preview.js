@@ -2,21 +2,17 @@ import React from "react";
 import { Link } from "gatsby";
 
 const blogPreview = ({ blog }) => (
-  <article className="card">
-    <Link to={blog.path}>
+  <Link to={blog.path} className="post-link">
+    <article className="card">
       {!!blog.thumbnail && (
         <img src={blog.thumbnail} alt={blog.title + "- Featured Shot"} />
       )}
-    </Link>
-    <header>
-      <h2 className="post-title">
-        <Link to={blog.path} className="post-link">
-          {blog.title}
-        </Link>
-      </h2>
-      <div className="post-meta">{blog.date}</div>
-    </header>
-  </article>
+      <header>
+        <h3 className="post-title">{blog.title}</h3>
+        <div className="post-meta">{blog.date}</div>
+      </header>
+    </article>
+  </Link>
 );
 
 export default blogPreview;

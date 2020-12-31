@@ -9,6 +9,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 * {
   margin-top: 0;
@@ -61,15 +62,12 @@ body.dark {
 /* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family-sans-serif;
-  // border-top: 10px solid var(--primary-color);
   background: radial-gradient(
     circle at 50% 0%,
     var(--primary-color) 25%,
     var(--background) 26%,
     var(--background) 40%
   );
-  // background-color: #E26464;
-  // height:50px;
   background-color: var(--background);
   background-size: 50px 100px;
   background-repeat: repeat-x;
@@ -171,7 +169,6 @@ a {
     padding: 0 0 64px;
     border-bottom: 10px dashed var(--primary-color);
     margin: 0 0 40px;
-    // display: flex;
   }
   &__headline {
     font-size: 48px;
@@ -298,11 +295,19 @@ a {
   grid-template-columns: 1fr;
   grid-gap: 32px;
   margin: 32px 0 50px;
+
+  .post-link {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
   &.projects {
     grid-template-columns: 100%;
+
     .card {
       display: grid;
       grid-template-rows: auto;
+
       .card-image {
         background-size: cover;
         background-position: center;
@@ -314,6 +319,7 @@ a {
     }
   }
 }
+
 .card {
   display: grid;
   background-color: var(--card-bg);
@@ -322,7 +328,7 @@ a {
   box-shadow: 0 0 30px var(--card-shadow);
   overflow: hidden;
   line-height: 1.5;
-  &:hover .post-link {
+  &:hover .post-title {
     color: var(--primary-color);
   }
   > a img {
@@ -341,10 +347,6 @@ a {
   .post-meta {
     margin-bottom: 0;
     text-transform: uppercase;
-  }
-  .post-link {
-    color: var(--text-color);
-    text-decoration: none;
   }
 }
 .post-meta {
@@ -399,14 +401,14 @@ a {
     }
   }
 }
-       
+
 /* Mobile */
 @media only screen and (min-width: 425px) {
   .grids {
     &.projects {
       .card {
         .card-image {
-        min-height: 300px;
+          min-height: 300px;
         }
       }
     }
