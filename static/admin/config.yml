@@ -5,6 +5,7 @@ backend:
 
 media_folder: static/assets
 public_folder: /assets
+publish_mode: editorial_workflow
 
 collections:
   - name: settings
@@ -25,7 +26,7 @@ collections:
           - widget: text
             name: description
             label: Description
-            default: ''
+            default: ""
             required: false
           - widget: object
             name: home
@@ -34,30 +35,26 @@ collections:
               - widget: string
                 name: title
                 label: Title
-                default: ''
+                default: ""
                 required: false
               - widget: markdown
                 name: description
                 label: Description
-                default: ''
+                default: ""
                 required: false
   - name: blog
     label: Blog
     folder: _data/blog
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
-      - {
-          label: Template,
-          name: template,
-          widget: hidden,
-          default: BlogPost,
-        }
+      - { label: Template, name: template, widget: hidden, default: BlogPost }
+      - { label: Posttype, name: posttype, widget: hidden, default: blog }
       - name: path
         label: Path
         widget: string
         # pattern: [/]
-        pattern: ['.{12,}', "Must have at least 12 characters"]
+        pattern: [".{12,}", "Must have at least 12 characters"]
         hint: "Path must start with /"
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
@@ -77,20 +74,16 @@ collections:
   - name: project
     label: Project
     folder: _data/project
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
-      - {
-          label: Template,
-          name: template,
-          widget: hidden,
-          default: BlogPost,
-        }
+      - { label: Template, name: template, widget: hidden, default: ProjectPost }
+      - { label: Posttype, name: posttype, widget: hidden, default: project }
       - name: path
         label: Path
         widget: string
         # pattern: [/]
-        pattern: ['.{12,}', "Must have at least 12 characters"]
+        pattern: [".{12,}", "Must have at least 12 characters"]
         hint: "Path must start with /"
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
