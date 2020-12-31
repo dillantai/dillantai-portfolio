@@ -1,10 +1,10 @@
 ---
 posttype: project
 template: ProjectPost
-path: /project-test
+path: /project-test-two
 date: 2020-02-20T14:59:36.571Z
-title: Test One
-thumbnail: /assets/image-4.jpg
+title: Test Two
+thumbnail: /assets/image-2.jpg
 ---
 # No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister.
 
