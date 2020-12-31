@@ -1,5 +1,5 @@
-@import "~fontsource-muli/index.css";
-@import "~fontsource-martel/index.css";
+@import "~@fontsource/muli/index.css";
+@import "~@fontsource/martel/index.css";
 
 $font-family-sans-serif: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -298,6 +298,21 @@ a {
   grid-template-columns: 1fr;
   grid-gap: 32px;
   margin: 32px 0 50px;
+  &.projects {
+    grid-template-columns: 100%;
+    .card {
+      display: grid;
+      grid-template-rows: auto;
+      .card-image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: none;
+        min-height: 200px;
+        width: 100%;
+      }
+    }
+  }
 }
 .card {
   display: grid;
@@ -384,10 +399,38 @@ a {
     }
   }
 }
+       
+/* Mobile */
+@media only screen and (min-width: 425px) {
+  .grids {
+    &.projects {
+      .card {
+        .card-image {
+        min-height: 300px;
+        }
+      }
+    }
+  }
+}
+
 /* Portrait and Landscape */
 @media only screen and (min-width: 768px) {
   .grids {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .grids {
+    &.projects {
+      grid-template-columns: 100%;
+      .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-height: 400px;
+        .card-image {
+          height: 100%;
+        }
+      }
+    }
   }
 }
 @media only screen and (min-width: 1024px) {

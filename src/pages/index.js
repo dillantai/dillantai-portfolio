@@ -22,7 +22,7 @@ const IndexPage = () => {
       </Helmet>
       <HeroHeader />
       <h2 className="section-heading">Select Projects &darr;</h2>
-      <div className="grids">
+      <div className="grids projects">
         {projects.map(project => (
           <ProjectPreview key={project.id} project={project} />
         ))}
