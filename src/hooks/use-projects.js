@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const useBlogs = () => {
+const useProjects = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        filter: { frontmatter: { posttype: { eq: "blog" } } }
+        filter: { frontmatter: { posttype: { eq: "project" } } }
         sort: { order: DESC, fields: [frontmatter___date] }
       ) {
         nodes {
@@ -20,14 +20,15 @@ const useBlogs = () => {
       }
     }
   `);
-  return data.allMarkdownRemark.nodes.map(blog => ({
-    date: blog.frontmatter.date,
-    path: blog.frontmatter.path,
-    title: blog.frontmatter.title,
-    thumbnail: blog.frontmatter.thumbnail,
-    html: blog.html,
-    id: blog.id
+  return data.allMarkdownRemark.nodes.map(project => ({
+    date: project.frontmatter.date,
+    path: project.frontmatter.path,
+    title: project.frontmatter.title,
+    thumbnail: project.frontmatter.thumbnail,
+    html: project.html,
+    id: project.id,
+    excerpt: project.excerpt
   }));
 };
 
-export default useBlogs;
+export default useProjects;

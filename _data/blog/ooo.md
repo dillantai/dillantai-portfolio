@@ -1,9 +1,9 @@
 ---
 posttype: blog
 template: BlogPost
-path: /with-code
+path: /with-codeooo
 date: 2020-02-20T15:08:12.174Z
-title: Code with Syntax Highlighting with PrismJS
+title: ooo
 thumbnail: /assets/image-2.jpg
 ---
 

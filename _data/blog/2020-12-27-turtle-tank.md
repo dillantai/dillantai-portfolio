@@ -1,4 +1,5 @@
 ---
+posttype: blog
 template: BlogPost
 path: /css-art-turtle-tank
 date: 2020-12-27T07:52:50.468Z

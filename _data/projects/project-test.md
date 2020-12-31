@@ -1,9 +1,9 @@
 ---
-posttype: blog
-template: BlogPost
-path: /fillerama
+posttype: project
+template: ProjectPost
+path: /project-test
 date: 2020-02-20T14:59:36.571Z
-title: Content from Fillerama
+title: PROJECT TESTTTTT
 thumbnail: /assets/image-5.jpg
 ---
 # No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister.

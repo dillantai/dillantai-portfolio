@@ -1,4 +1,5 @@
 ---
+posttype: blog
 title: Hello world!
 path: /asdf1
 author: Dillan Tai
