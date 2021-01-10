@@ -159,6 +159,12 @@ a {
       text-decoration: none;
     }
   }
+  &.-secondary {
+    &:hover {
+      color: var(--primary-text-color);
+      text-decoration: none;
+    }
+  }
   &:hover {
     background-color: var(--button-hover);
     color: var(--btn-hover-text-color);
