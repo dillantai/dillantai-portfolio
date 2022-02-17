@@ -2,7 +2,7 @@
 posttype: project
 template: ProjectPost
 path: /kit-cat-toe
-date: 2016-08-20T14:59:36.571Z
+date: 2017-08-29T14:59:36.571Z
 title: Kit Kat Toe, a JavaScript game
 thumbnail: /assets/kitcattoe.png
 ---

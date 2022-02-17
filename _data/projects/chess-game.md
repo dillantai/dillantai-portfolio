@@ -2,7 +2,7 @@
 posttype: project
 template: ProjectPost
 path: /agile-chess
-date: 2016-09-13T11:42:13.31Z
+date: 2017-10-14T16:15:13.31Z
 title: Agile Team Project
 thumbnail: /assets/chess.png
 ---
