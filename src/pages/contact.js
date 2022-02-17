@@ -26,6 +26,10 @@ const ContactPage = () => {
           <h1 className="post-title">get in touch</h1>
         </div>
         <div>
+          <h2>Send me an email:</h2>
+          <p>dillantai@gmail.com</p>
+
+          <h2>Shoot me a message:</h2>
           <form
             method="post"
             netlify-honeypot="bot-field"
@@ -37,11 +41,11 @@ const ContactPage = () => {
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
             <label>
-              name
+              your name
               <input type="text" name="name" id="name" />
             </label>
             <label>
-              email
+              your email
               <input type="email" name="email" id="email" />
             </label>
             <label>
