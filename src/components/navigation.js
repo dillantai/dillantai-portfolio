@@ -7,8 +7,8 @@ export default props => (
     <Link to="/contact" activeClassName="current-page">
       contact
     </Link>
-    <a href="#select-projects">projects</a>
-    <a href="#blog-posts">blog</a>
+    <a href="/#select-projects">projects</a>
+    <a href="/#blog-posts">blog</a>
     <ThemeChanger />
   </nav>
 );

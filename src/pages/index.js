@@ -21,7 +21,7 @@ const IndexPage = () => {
         <meta name="description" content={description} />
       </Helmet>
       <HeroHeader />
-      <h2 className="section-heading" id="select-projects">Select Projects &darr;</h2>
+      <h2 className="section-heading" id="select-projects">Select Projects (under construction!) &darr;</h2>
       <div className="grids projects">
         {projects.map(project => (
           <ProjectPreview key={project.id} project={project} />
